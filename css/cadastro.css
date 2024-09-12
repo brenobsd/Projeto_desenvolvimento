@@ -4,30 +4,33 @@
 }
 
 body{
-    background-image: url(../img/pexels-lulizler-3165335.jpg);
+    background-image: url(../img/poster-coringa-2.webp);
     background-size: cover;
     background-repeat: no-repeat;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
 
 
 .cabecalho{
-    background: radial-gradient(#5e15729a,#420e50);
     padding-right: 10%;
-    height: 80px;
+    height: 100px;
     display: flex;
-    justify-content: end;
     align-items: center;
-    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.logo{
+    height: 2px;
+    width: 2px;
+    margin: 40px;
+    padding-bottom: 30px;
 }
 
 .cabecalho_lista_listas {
-    display: inline;
-    margin: 24px;
+    display: inline-block;
+    margin-left: 80px;
     cursor: pointer;
     font-size: 26px;
-        
+    justify-content: end;   
 }
 
 a{
@@ -49,21 +52,30 @@ main{
 
 .main__form {
     display: flex;
+    justify-content:center;
+
+}
+.title{
+    font-size: 20px;
     justify-content: center;
-    
+
+}
+.descricao{
+    margin-top: 20px;
 }
 
 .formulario {
-    background-color: #7a1b9461;
-    width: 336px;
-    height: 500px;
+    color: rgb(255, 255, 255);
+    background-color: #03030361;
+    width: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
-    border: #fff;
+    border: #ffffff;
     border-radius: 6px;
     justify-content: center;
-    
-    
+    font-size: 22px;
+    margin-left: 50px;
 }
 
 .inputs {
@@ -71,6 +83,7 @@ main{
     display: flex;
     flex-direction: column;
     margin:auto;
+    border-left: #ffffff;
 }
 
 
@@ -84,21 +97,20 @@ main{
 }
 
 .entrada {
-    width: 252px;
+    width: 352px;
     height: 40px;
     padding-left: 12px;
     border-radius: 6px;
     border: 1px solid #CBD5E1;
     margin-top: 6px;
     gap: 6px;
-    background-color:#9621b69f ;
+    background-color:#ffffff ;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .entrada::placeholder{
-    color: #ffffff;
+    color: #000000;
     font-size: 1rem;
-    text-align: center;
 }
 
 .Termos{
@@ -112,7 +124,7 @@ main{
     color: #ffffff;
     font-size: 14px;
     font-weight: 500;
-    background-color: #5E1572;
+    background-color: #434343;
     width: 252px;
     height: 40px;
     display: flex;

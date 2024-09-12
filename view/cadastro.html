@@ -13,77 +13,46 @@
 
   <body>
     <header class="cabecalho">
+      <div class="logo">        
+        <a href="../index.html">
+          <img src="../img/logo.png" height="40px">
+        </a>
+      </div>
       <ul>
-        <li class="cabecalho_lista_listas"><a href="">Cadastro</a></li>
+        <li class="cabecalho_lista_listas"><a href=""></a></li>
         <li class="cabecalho_lista_listas">
-          <a href="./login.html" target="_blank">Login</a>
+          <a href="./login.html" target="_blank"></a>
         </li>
         <li class="cabecalho_lista_listas">
-          <a href="./home.html" target="_blank">Home</a>
+          <a href="./home.html" target="_blank"></a>
         </li>
       </ul>
     </header>
     <main>
       <div class="main__form">
-        <form class="formulario" action="" method="">
+        <form class="formulario">
+          <h1 class="title">Cadastre-se</h1>
+          <p class="descricao">Compre ingressos e combos de pipoca com conforto e comodidade</p>
           <div class="inputs">
-            <label class="rotulo" for="Name">
-              Nome:
-              <input
-                class="entrada"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Digite seu nome"
-              />
+            <label class="rotulo" for="Name">Nome:
+              <input class="entrada" type="text" name="name" id="name" placeholder="Digite seu nome"/>
             </label>
-            <label class="rotulo" for="email"
-              >Email:
-              <input
-                class="entrada"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Digite seu email"
-              />
+            <label class="rotulo" for="email">Email:
+              <input class="entrada" type="email" name="email" id="email" placeholder="Digite seu email"/>
             </label>
             <label class="rotulo" for="password">Senha:</label>
-            <input
-              class="entrada"
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Digite sua senha"
-            />
-            <label class="rotulo" for="cpf_cnpj"
-              >CPF/CNPJ:
-              <input
-                class="entrada"
-                type="text"
-                name="cpf_cnpj"
-                placeholder="Digite seu CPF/CNPJ"
-                id="cpf-cnpj"
+            <input class="entrada" type="password" name="password" id="password" placeholder="Digite sua senha"/>
+            <label class="rotulo" for="cpf_cnpj">CPF/CNPJ:
+              <input class="entrada" type="text" name="cpf_cnpj" placeholder="Digite seu CPF/CNPJ" id="cpf-cnpj"
               />
             </label>
-            <label class="rotulo" for="birthday"
-              >Data de nascimento:
-              <input
-                class="entrada"
-                type="date"
-                name="data_nascimento"
-                id="date"
-              />
+            <label class="rotulo" for="birthday">Data de nascimento:
+              <inputclass="entrada" type="date" name="data_nascimento" id="date"/>
             </label>
-            <label class="Termos" for="terms"
-              >Termos:
-              <input type="checkbox" name="Termos" id="terms" />
+            <label class="Termos" for="terms">Termos:
+              <input type="checkbox" name="Termos" id="terms"/>
             </label>
-            <input
-              class="botao"
-              type="button"
-              value="Enviar"
-              onclick="cadastro()"
-              id="botao-input"
+            <input class="botao" type="button" value="Enviar" onclick="cadastro()" id="botao-input"
             />
           </div>
         </form>
