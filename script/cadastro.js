@@ -25,17 +25,22 @@ async function cadastro_usuario() {
   });
 
     if (api.ok) {
-      let resp = await api.json();
-      alert(resp.data);
-      console.log(resp.data);
+      let resposta = await api.json();
+      alert(resposta.data);
+      console.log(resposta.data);
+      return
     } else {
-      let respErro = await api.json();
-      if (respErro?.data?.errors?.cpf_cnpj?.[0]) {
-        alert(`ERRO, ${respErro.data.errors.cpf_cnpj[0]}`);
-      } else {
-        alert("Ocorreu um erro desconhecido.");
+      let respostaErro = await api.json();
+      if (respostaErro?.data?.errors?.email?.[0]) {
+        alert(`ERRO, ${respostaErro.data.errors.email[0]}`);
+        } 
+      if (respostaErro?.data?.errors?.cpf_cnpj?.[0]) {
+      alert(`ERRO, ${respostaErro.data.errors.cpf_cnpj[0]}`);
+      } 
+      if (respostaErro?.data?.errors?.password?.[0]){
+      alert(`ERRO, ${respostaErro.data.errors.password[0]}`)
       }
-      console.log(respErro);
-    }
+       console.log(respostaErro);
   }
 
+}
