@@ -6,7 +6,37 @@ async function cadastro_usuario() {
   let senha = document.querySelector("#password").value;
   let data = document.querySelector("#date").value;
   let termos = document.querySelector("#terms").checked;
-   
+
+
+if(!name){
+  alert("Preencha o campo de nome")
+  return;
+}
+
+if(!email){
+  alert("Preencha o campo de email")
+  return;
+}
+
+if(!cpf){
+  alert("Preencha o campo de cpf")
+  return;
+}
+
+if(!senha){
+  alert("Preencha o campo de senha")
+  return;
+} 
+
+if(!data){
+  alert("Preencha o campo de data")
+  return;
+}
+if(!termos){
+  alert("Aceite os termos")
+  return;
+}
+
   
   let api = await fetch(url, {
     method: "POST",
@@ -33,7 +63,7 @@ async function cadastro_usuario() {
       let respostaErro = await api.json();
       if (respostaErro?.data?.errors?.email?.[0]) {
         alert(`ERRO, ${respostaErro.data.errors.email[0]}`);
-        } 
+      } 
       if (respostaErro?.data?.errors?.cpf_cnpj?.[0]) {
       alert(`ERRO, ${respostaErro.data.errors.cpf_cnpj[0]}`);
       } 
