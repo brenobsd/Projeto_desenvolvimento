@@ -37,4 +37,8 @@ if (api.ok) {
     }
 }
 
-
+function cadastro_endereco(){
+  let user = JSON.stringify(localStorage.getItem("user"));
+  console.log(user);
+}
+cadastro_endereco();
