@@ -5,10 +5,21 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Login</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/login.css'>
+    <script src='../script/login.js'></script>
 </head>
 <body>
+    <main>
+        <form>
+            <label class="email" >
+                <input type="text" class="entrada_email" placeholder="digite seu email" id="email">
+            </label>
+            <label class="password">
+                <input type="text" class="entrada_password" placeholder="digite sua senha" id="password">
+            </label>
+            <button type="button" id="button_login" onclick="login_usuario()">Enviar</button>
+        </form>
+    </main>
     
 </body>
 </html>
