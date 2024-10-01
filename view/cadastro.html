@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,23 +13,27 @@
   </head>
 
   <body>
-    <header class="cabecalho">
-      <div class="logo">        
-        <a href="../index.html">
-          <img src="../img/logo.png" height="40px">
-        </a>
+    <header class="header">
+      <div class="cabecalho">
+          <div class="logo">
+              <a href="../index.html">
+                <img src="../img/logo.png" class="logo" alt="Logo">
+              </a>
+          </div>
+          <nav class="nav">
+              <ul class="nav-list">
+                  <li><a href="./view/home.html">Home</a></li>
+                  <li><a href="#">Sobre</a></li>
+                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#">Contato</a></li>
+              </ul>
+          </nav>
+          <div class="auth-buttons">
+              <a href="../view/login.html" class="login-button">Login</a>
+              <a href="../index.html" class="register-button">Página Inicial</a>
+          </div>
       </div>
-      <ul>
-        <li class="cabecalho_lista_listas"><a href=""></a></li>
-        <li class="cabecalho_lista_listas">
-          <a href="./login.html" target="_blank"></a>
-        </li>
-        <li class="cabecalho_lista_listas">
-          <a href="./home.html" target="_blank"></a>
-        </li>
-      </ul>
-    </header>
-    <main>
+  </header>
       <div class="main__form">
         <form class="formulario">
           <h1 class="title">Cadastre-se</h1>
@@ -57,6 +62,12 @@
         </form>
       </div>
     </main>
+    <footer class="footer">
+      <div class="footer-content">
+          <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+
+      </div>
+  </footer>
     <script src="../script/cadastro.js"></script>
   </body>
 </html>

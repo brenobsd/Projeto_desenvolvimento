@@ -30,6 +30,7 @@ if (api.ok) {
     localStorage.setItem("user",JSON.stringify(resposta));
     alert("Login feito com sucesso");
     console.log("Login feito com sucesso");
+    window.location.href = "../view/home.html";
     return
     } else{
     let respostaErro = await api.json();
