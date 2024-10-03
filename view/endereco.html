@@ -7,33 +7,62 @@
     <title>Endereço</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/endereco.css'>
-    <script src='../script/enderco.js'></script>
+    <script src='../script/endereco.js'></script>
 </head>
 
 <body>
-    <div class="main__form"></div>
-    <form class="formulario">
-        <h1 class="title">Cadastre seu endereço</h1>
-        <div class="inputs">
-            <label class="rotulo" for="title">Título:
-                <input class="entrada" type="text" name="title" id="title" placeholder="Digite o título" />
-            </label>
-            <label class="rotulo" for="CEP">CEP:
-                <input class="entrada" type="cep" name="cep" id="cep" placeholder="Digite seu CEP" />
-            </label>
-            <label class="rotulo" for="endereco">Endereço:
-                <input class="entrada" type="endereco" name="endereco" id="adress" placeholder="Digite seu endereço" />
-            </label>
-            <label class="rotulo" for="cpf_cnpj">Número:
-                <input class="entrada" type="number" name="numero" placeholder="Digite seu número" id="number" />
-            </label>
-            <label class="rotulo" for="birthday">Complemento:
-                <input class="entrada" type="text" name="complemento" placeholder="Digite o complemento" id="complement" />
-            </label>
-            <input class="botao" type="button" value="Enviar" onclick="cadastro_endereco()" id="botao-input" />
-        </div>
-    </form>
+    <body class="background">
+        <div class="background-image"></div>
+        <header class="header">
+            <div class="cabecalho">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a> <!-- Ajuste o caminho para o seu logo -->
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="../view/home.html">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="../view/login.html" class="login-button">Login</a>
+                    <a href="../view/cadastro.html" class="register-button">Cadastro</a>
+                </div>
+            </header>
+        
+        <main>
+            <div class="form">
+        <form class="formulario">
+            <h1 class="title">Cadastre seu endereço</h1>
+            <div class="inputs">
+                <label class="rotulo" for="title">Título:
+                    <input class="entrada" type="text" name="title" id="title" placeholder="Digite o título" />
+                </label>
+                <label class="rotulo" for="CEP">CEP:
+                    <input class="entrada" type="text" name="cep" id="cep" placeholder="Digite seu CEP" />
+                </label>
+                <label class="rotulo" for="endereco">Endereço:
+                    <input class="entrada" type="text" name="endereco" id="adress" placeholder="Digite seu endereço" />
+                </label>
+                <label class="rotulo" for="numero">Número:
+                    <input class="entrada" type="number" name="numero" placeholder="Digite seu número" id="number" />
+                </label>
+                <label class="rotulo" for="complement">Complemento:
+                    <input class="entrada" type="text" name="complemento" placeholder="Digite o complemento" id="complement" />
+                </label>
+                <input class="botao" type="button" value="Enviar" onclick="cadastro_endereco()" id="botao-input" />
+            </div>
+        </form>
     </div>
+       <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Ingresso.com. Todos os direitos reservados. 🎫</p>
+            <ul class="footer-links">
+        
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,139 @@
+body {
+    background-image: url('../img/kozGRIxIQjoQBHDzHl2cTAWlOxeIksK09X3BbLj2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Largura do formulário */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza os itens dentro do formulário */
+    margin-top: 10px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    color: white
+}
+
+
+.header {
+    background-color: black; /* Fundo preto para o header */
+    color: white; /* Cor do texto */
+    padding: 30px 0;
+    position: relative; /* Para posicionamento se necessário */
+    z-index: 1; /* Para garantir que o header fique acima do conteúdo */
+}
+
+.cabecalho .logo img {
+    display: flex;
+    height: 70px;
+    width: 200px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Ajuste este valor para o espaçamento desejado */
+}
+
+.nav-list li {
+    margin: 0; /* Remove margens adicionais se houver */
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 10px; /* Adiciona um pouco de preenchimento para melhorar a área clicável */
+}
+
+.nav-list a:hover {
+    color: #ffd700; /* Cor de destaque ao passar o mouse */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button, .register-button {
+    color: white;
+    background-color: #0056b3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover, .register-button:hover {
+    background-color: #5fa9ee;
+}
+
+.register-button {
+    background-color: #0056b3;
+}
+
+.register-button:hover {
+    background-color: #5fa9ee;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
