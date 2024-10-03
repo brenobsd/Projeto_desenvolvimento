@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,7 +9,31 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../css/endereco.css'>
     <script src='../script/enderco.js'></script>
 </head>
+
 <body>
-    
+    <div class="main__form"></div>
+    <form class="formulario">
+        <h1 class="title">Cadastre seu endereço</h1>
+        <div class="inputs">
+            <label class="rotulo" for="title">Título:
+                <input class="entrada" type="text" name="title" id="title" placeholder="Digite o título" />
+            </label>
+            <label class="rotulo" for="CEP">CEP:
+                <input class="entrada" type="cep" name="cep" id="cep" placeholder="Digite seu CEP" />
+            </label>
+            <label class="rotulo" for="endereco">Endereço:
+                <input class="entrada" type="endereco" name="endereco" id="adress" placeholder="Digite seu endereço" />
+            </label>
+            <label class="rotulo" for="cpf_cnpj">Número:
+                <input class="entrada" type="number" name="numero" placeholder="Digite seu número" id="number" />
+            </label>
+            <label class="rotulo" for="birthday">Complemento:
+                <input class="entrada" type="text" name="complemento" placeholder="Digite o complemento" id="complement" />
+            </label>
+            <input class="botao" type="button" value="Enviar" onclick="cadastro_endereco()" id="botao-input" />
+        </div>
+    </form>
+    </div>
 </body>
+
 </html>
