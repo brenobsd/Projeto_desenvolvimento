@@ -6,7 +6,6 @@ async function cadastro_endereco() {
     let number = document.querySelector("#number").value;
     let complement = document.querySelector("#complement").value;
 
-
     if (!title) {
         alert("Preencha o campo de título")
         return;
@@ -28,22 +27,22 @@ async function cadastro_endereco() {
     let api = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-        "title": title,
-        "cep": cep,
-        "address": address,
-        "number": number,
-        "complement": complement,
+            "title": title,
+            "cep": cep,
+            "address": address,
+            "number": number,
+            "complement": complement,
         }),
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer "+JSON.parse(localStorage.getItem("user")).access_token,
+            "Authorization": "Bearer" + JSON.parse(localStorage.getItem("user")).access_token,
         },
     })
     if (api.ok) {
         let resposta = await api.json();
-        console.log(resposta)
-        alert("Endereço cadastrado com sucesso")
-        window.location.href = "../view/home.html"
+        console.log(resposta);
+        alert("Endereço cadastrado com sucesso");
+        window.location.href = "../view/home.html";
         return
     }
 }
