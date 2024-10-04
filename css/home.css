@@ -36,6 +36,7 @@ p {
     padding: 30px 0;
     position: relative; /* Para posicionamento se necessário */
     z-index: 1; /* Para garantir que o header fique acima do conteúdo */
+    width: 100%;
 }
 
 .cabecalho .logo img {
@@ -50,7 +51,7 @@ p {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding:10px;
+    padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

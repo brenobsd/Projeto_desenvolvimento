@@ -35,9 +35,3 @@ async function login_usuario() {
     return
   }
 }
-
-function cadastro_token(){
-  let user = JSON.parse(localStorage.getItem("user"));
-  console.log(user)
-}
-cadastro_token(); 

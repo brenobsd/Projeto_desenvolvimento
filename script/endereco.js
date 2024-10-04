@@ -25,7 +25,6 @@ async function cadastro_endereco() {
     }
 
 
-
     let api = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
@@ -37,14 +36,14 @@ async function cadastro_endereco() {
         }),
         headers: {
             "Content-Type": "application/json",
+            "Authorization": "Bearer "+JSON.parse(localStorage.getItem("user")).access_token,
         },
     })
     if (api.ok) {
         let resposta = await api.json();
-        let user = JSON.parse(localStorage.getItem("user"));
-        localStorage.setItem("user", JSON.stringify(resposta));
-        console.log(user.acess_token);
-        alert(resposta.status);
+        console.log(resposta)
+        alert("Endereço cadastrado com sucesso")
+        window.location.href = "../view/home.html"
         return
     }
 }
