@@ -8,9 +8,17 @@ async function mostrar_enderecos() {
     });
     if (api.ok) {
         let resposta = await api.json();
-        console.log(resposta)
+        console.log(resposta);
+        const divEnderecos = document.getElementById("enderecos");
+        let listaEnderecos = resposta.data;
+        listaEnderecos.forEach(endereco => {
+            const p = document.createElement("p");
+            p.textContent = `Endereço: ${endereco.title}, ${endereco.cep}, ${endereco.address}, ${endereco.number} - ${endereco.complement}`;
+            divEnderecos.appendChild(p);
+        });
     } else {
         console.log(`Erro: ${response.status}`);
+        alert(`Erro: ${response.status}`);
     }
 }
 mostrar_enderecos();
