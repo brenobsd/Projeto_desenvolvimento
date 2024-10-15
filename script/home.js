@@ -12,8 +12,8 @@ async function mostrar_enderecos() {
         const divEnderecos = document.getElementById("enderecos");
         let listaEnderecos = resposta.data;
         listaEnderecos.forEach(endereco => {
-            const p = document.createElement("p");
-            p.textContent = `Endereço: ${endereco.title}, ${endereco.cep}, ${endereco.address}, ${endereco.number} - ${endereco.complement}`;
+            const p = document.createElement("p2");
+            p.textContent = `${endereco.title}, ${endereco.cep}, ${endereco.address}, ${endereco.number} - ${endereco.complement}`;
             divEnderecos.appendChild(p);
         });
     } else {
