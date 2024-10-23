@@ -10,8 +10,6 @@ body {
     /* Centraliza a imagem */
     background-repeat: no-repeat;
     /* Evita repetição da imagem */
-    color: #fff;
-    /* Cor do texto */
 }
 
 h1 {
@@ -25,9 +23,10 @@ p {
 }
 
 p2 {
-    font-size: 1.2em;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p2:hover {
