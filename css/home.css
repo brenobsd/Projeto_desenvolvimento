@@ -103,6 +103,20 @@ p2:hover {
     background-color: #5fa9ee;
 }
 
+.logout-button{
+    color: rgb(255, 255, 255);
+    background-color: #c30505;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}
+
+.logout-button:hover{
+    background-color: #f62a2a;
+}
+
 main {
     display: flex;
     flex-direction: column;

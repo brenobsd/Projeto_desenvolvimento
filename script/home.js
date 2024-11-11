@@ -1,7 +1,7 @@
-const url = "https://go-wash-api.onrender.com/api/auth/address";
+const url = "https://go-wash-api.onrender.com/api/auth";
 
 async function mostrar_enderecos() {
-    let api = await fetch(url, {
+    let api = await fetch(url+"/address", {
         headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + JSON.parse(localStorage.getItem("user")).access_token,
@@ -35,6 +35,7 @@ async function mostrar_enderecos() {
             divEnderecos.appendChild(p);
 
             btn_atualizar.addEventListener('click', function() {
+                window.location.href = "../view/atualizar_endereco.html"
                 atualizarEndereco(endereco.id);
             });
 
@@ -48,44 +49,10 @@ async function mostrar_enderecos() {
     }
 }
 
-async function atualizarEndereco(id) {
-    let novoTitulo = prompt("Digite o novo título:");
-    let novoCep = prompt("Digite o novo CEP:");
-    let novoEndereco = prompt("Digite o novo endereço:");
-    let novoNumero = prompt("Digite o novo número:");
-    let novoComplemento = prompt("Digite o novo complemento:");
-
-    let data = {
-        title: novoTitulo,
-        cep: novoCep,
-        address: novoEndereco,
-        number: novoNumero,
-        complement: novoComplemento
-    };
-
-
-    let response = await fetch(`${url}/${id}`, {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + JSON.parse(localStorage.getItem("user")).access_token,
-        },
-        body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-        alert("Endereço atualizado com sucesso!");
-        window.location.reload();
-    } else {
-        console.log(`Erro ao atualizar: ${response.status}`);
-        alert(`Erro ao atualizar: ${response.status}`);
-    }
-}
-
 async function deletarEndereco(id) {
     let confirmacao = confirm("Você realmente deseja deletar este endereço?");
     if (confirmacao) {
-        let response = await fetch(`${url}/${id}`, {
+        let response = await fetch(`${url+"/address"}/${id}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -95,12 +62,30 @@ async function deletarEndereco(id) {
 
         if (response.ok) {
             alert("Endereço deletado com sucesso!");
-            mostrar_enderecos(); 
+            mostrar_enderecos();
+            window.location.reload() 
         } else {
             console.log(`Erro ao deletar: ${response.status}`);
             alert(`Erro ao deletar: ${response.status}`);
         }
     }
 }
-
+async function logout(){
+    let resposta = await fetch(url+"/logout",{ 
+        method: 'POST' ,
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + JSON.parse(localStorage.getItem("user")).access_token,
+        },
+    });
+    if (resposta.ok){
+        localStorage.removeItem("user");
+        window.location.href="../view/login.html";
+        alert("Logout feito com sucesso");
+        console.log("Logout feito com sucesso")
+    } else {
+        console.log(`Erro ao fazer Logout: ${response.status}`);
+        alert(`Erro ao fazer Logout: ${response.status}`);
+    }
+}
 mostrar_enderecos();
